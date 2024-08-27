@@ -1,0 +1,114 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('teB.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            filter: blur(20%);
+        }
+        
+        .container-avatar {
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .judul {
+            text-align: center;
+        }
+        
+        .container {
+            width: 300px;
+            padding: 16px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 0 auto;
+            margin-top: 100px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: left;
+        }
+        
+        input[type=text],
+        input[type=password],
+        input[type=file] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container-avatar"><img src="person-icon.svg" alt="Avatar" class="avatar"></div>
+        <h2 class="judul">Registration Form</h2>
+        <form action="../register.php" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Username" name="username" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Password" name="password" required>
+
+                <label for="nama"><b>Nama Lengkap</b></label>
+                <input type="text" placeholder="Input Nama" name="nama" required>
+
+                <label for="nim"><b>Nomor Induk Mahasiswa</b></label>
+                <input type="text" placeholder="Input Nomor Induk" name="nim" required>
+
+                <label for="foto"><b>Foto</b></label>
+                <input type="file" name="foto" accept=".jpg, .jpeg, .png, .webp" required>
+
+                <label for="grup"><b>Pilih Grup: </b>
+                    <select name="grup" id="grup" required>
+                        <option value="">none</option>
+                        <option value="kandidat">Kandidat</option>
+                        <option value="pemilih">Pemilih</option>
+                    </select>
+                </label>
+
+                <button type="submit" name="save" value="simpan data" class="btn btn-primary">Register</button>
+                <button type="button" onclick="window.location.href='menu.html'" class="btn btn-secondary">Menu</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
